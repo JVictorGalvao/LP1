@@ -9,7 +9,7 @@ double percentual (int contador, int total){
 }
 
 int main (){
-    int jogador, contador[24] = {0}, total=0;
+    int jogador, contador[24] = {0}, total=0, maior=0, camisa;
     cout << "Enquete: Quem foi o melhor jogador?" << endl;
     while (1){
         cout << "Numero do jogador (0 = fim): ";
@@ -34,8 +34,13 @@ int main (){
             cout << "\t   " << i << "\t  " << contador[i] << "\t   " << percentual(contador[i], total) << "%" << endl;
         }
     }
-
-
+    for (int i=1; i<24; i++){
+        if (contador[i]>maior){
+            maior = contador[i];
+            camisa = i;
+        }
+    }
+    cout << "O melhor jogador foi o numero " << camisa << " com " << maior << " votos, correspondendo a " << percentual(maior, total)<< "%"<< endl; 
 
     return 0;
 }
