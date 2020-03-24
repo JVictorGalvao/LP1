@@ -1,11 +1,11 @@
 #pragma once
 
-#include "Contaa.h"
+#include "IConta.h"
 #include "SaldoNaoDisponivel.h"
 #include <iostream>
 #include <string>
 
-class Conta: public Contaa
+class Conta: public IConta
 {
 protected:
     std::string nomeCliente;

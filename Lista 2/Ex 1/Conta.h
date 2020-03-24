@@ -1,9 +1,9 @@
 #pragma once
 
-#include "Contaa.h"
+#include "IConta.h"
 #include <string>
 
-class Conta: public Contaa
+class Conta: public IConta
 {
 protected:
     std::string nomeCliente;
